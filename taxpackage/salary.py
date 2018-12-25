@@ -17,13 +17,4 @@ def tax_salary(x):
 
 def tax_bonus(income,bonus):
     # import libraries
-    import csv
-
-
-    
-    # load dataframe
-    multiplier = float(round(bonus/income)
-    df = pd.read_csv('tax_table02_tidy.csv')
-    df_filtered = df[df['multiplier']==multiplier]
-    rate = df_filtered[(df_filtered['min']<=bonus)&(df_filtered['max']>=bonus)]['rate'].values[0]
-    return rate
+    pass
