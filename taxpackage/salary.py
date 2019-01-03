@@ -37,7 +37,7 @@ def tax_bonus(income, bonus):
     df2 = df.copy()
     df2 = df2[df2.multiplier == multiplier]
     # select the row applicable for the given income and assign the results to a new dataframe
-    df3 = df2[(df2['min'] <= 127500) & (df2['max'] >= 127500)]
+    df3 = df2[(df2['min'] <= income) & (df2['max'] >= income)]
     # extract the rate
     rate = df3.rate.values[0]
     return rate
