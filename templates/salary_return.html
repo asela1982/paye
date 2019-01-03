@@ -43,10 +43,10 @@
 
         <form method="POST" action="/salary" name="application" onsubmit="return validateform()">
             <div class="form-group row">
-                <label for="incomeInput" class="col-sm-2 col-form-label">Monthly income</label>
+                <label for="incomeInput" class="col-sm-2 col-form-label">Gross Income Amount</label>
                 <div class="col-sm-10">
-                    <input type="number" min="0.00" class="form-control" id="incomeInput" name="incomeInput"
-                        placeholder="Enter Income">
+                    <input type="number" min="0.00" step="0.01" class="form-control" id="incomeInput" name="incomeInput"
+                        placeholder="Enter Monthly Gross Income">
                     <small id="incomeHelp" class="form-text text-muted">We'll never store your income details.</small>
                 </div>
             </div>
@@ -58,6 +58,12 @@
                 income tax tables and instructions</a> for their use
             applicable with effect
             from 01.04.2018 </p>
+
+
+        <div class="alert alert-light" role="alert">
+            <p>Monthly Income : lkr {{income}}</p>
+            <p>Tax : lkr {{tax}}</p>
+        </div>
 
         <p style="font-size: 85%">Regular profits from employment include:</p>
 
@@ -78,10 +84,7 @@
 
 
 
-    <div class="alert alert-success" role="alert">
-        <p>Monthly Income : lkr {{income}}</p>
-        <p>Tax : lkr {{tax}}</p>
-    </div>
+
     <!-- js -->
     <script src="{{ url_for('static', filename='app.js') }}"></script>
 
