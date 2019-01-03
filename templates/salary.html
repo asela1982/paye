@@ -39,15 +39,15 @@
 
         <p class="lead" style="font-size: 85%">Insert income amounts below in Sri Lankan Rupees</p>
 
-        <form method="POST" action="/salary" name="application" onsubmit="return validateform()">
+        <form method="POST" action="/salary" name="application" onsubmit="return validateFormSalary()">
             <div class="form-group row">
-                    <label for="incomeInput" class="col-sm-2 col-form-label">Gross Income Amount</label>
-                    <div class="col-sm-10">
-                        <input type="number" min="0.00" step="0.01" class="form-control" id="incomeInput" name="incomeInput"
-                            placeholder="Enter Monthly Gross Income">
-                        <small id="incomeHelp" class="form-text text-muted">We'll never store your income details.</small>
-                    </div>
+                <label for="incomeInput" class="col-sm-2 col-form-label">Gross Income Amount</label>
+                <div class="col-sm-10">
+                    <input type="number" min="0.00" step="0.01" class="form-control"  name="incomeInput"
+                        placeholder="Enter Monthly Gross Income">
+                    <small id="incomeHelp" class="form-text text-muted">We'll never store your income details.</small>
                 </div>
+            </div>
             <button type="submit" class="btn btn-primary">Calculate my tax</button>
         </form>
         <p class="notes">The calculations were built as per the <a href="http://www.ird.gov.lk/en/publications/sitepages/PAYE%20Tax%20Tables.aspx?menuid=1502"
@@ -55,7 +55,7 @@
                 income tax tables and instructions</a> for their use
             applicable with effect
             from 01.04.2018 </p>
- 
+
         <p style="font-size: 85%">Regular profits from employment include:</p>
 
         <ul style="list-style-type:disc;font-size: 75%">

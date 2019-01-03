@@ -1,17 +1,24 @@
 
-function validateForm() {
-  var fields = ["incomeInput"]
+function validateFormSalary() {
+  var x = document.forms["application"]["incomeInput"].value;
 
-  var i, l = fields.length;
-  var fieldname;
-  for (i = 0; i < l; i++) {
-    fieldname = fields[i];
-    if (document.forms["application"][fieldname].value === "") {
-      alert(fieldname + " can not be empty");
-      return false;
-    }
+  if (x == "") {
+    alert("Gross Income Amount must be filled out");
+    return false;
   }
-  return true;
-};
+}
 
 
+function validateFormBonus() {
+  var x = document.forms["application"]["incomeInput"].value;
+  var y = document.forms["application"]["lumpsumInput"].value;
+
+  if (x == "") {
+    alert("Gross Income Amount must be filled out")
+    return false
+  }
+  else if (y == "") {
+    alert("Bonus Amount must be filled out")
+    return false
+  }
+} 

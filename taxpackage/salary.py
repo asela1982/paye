@@ -16,10 +16,7 @@ def tax_salary(x):
 
 
 def tax_bonus(income,bonus):
-    import pandas as pd
-    import pymysql
-    import operator
-    
+
     # connect to the database
     connection = pymysql.connect(host='us-cdbr-iron-east-01.cleardb.net',
                              user='b86c16bd05ee5b',
